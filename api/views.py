@@ -6,6 +6,9 @@ from rest_framework import filters
 from api.models import Customer
 from api.serializers import CustomerSerializer
 
+from api.models import Employee
+from api.serializers import EmployeeSerializer
+
 
 @api_view(['GET'])
 def api_root(request, format=None):
@@ -29,7 +32,16 @@ class CustomerViewSet(viewsets.ModelViewSet):
     #     if keyword is not None:
     #         print("query params", keyword)
     #         if keyword is 'products':
-    #             query_set = query_set.filter(products=keyword) 
+    #             query_set = query_set.filter(products=keyword)
     #         elif keyword is 'payments':
     #             query_set = query_set.filter(payments=keyword)
     #     return query_set
+
+
+
+class EmployeeViewSet(viewsets.ModelViewSet):
+    queryset = Employee.objects.all()
+    serializer_class = EmployeeSerializer
+
+    filter_backends = (filters.SearchFilter, )
+    search_fields = ('first_name', 'last_name', 'start_date', 'end_date', 'department', 'is_supervisor')
