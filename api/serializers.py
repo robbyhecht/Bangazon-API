@@ -4,6 +4,7 @@ from api.models import Employee
 from api.models import Product
 from api.models import ProductType
 from api.models import PaymentType
+from api.models import Department
 
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
     """translates customers to json"""
@@ -42,3 +43,11 @@ class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = PaymentType
         fields = ('payment_name', 'account_number', 'customer')
+
+
+class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
+    """translates departments to json"""
+
+    class Meta:
+        model = Department
+        fields = ('url', 'department_name', 'budget')
