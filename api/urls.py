@@ -10,7 +10,8 @@ router.register('employees', views.EmployeeViewSet)
 router.register('products', views.ProductViewSet)
 router.register('product_type', views.ProductTypeViewSet)
 router.register('payment_type', views.PaymentTypeViewSet)
-router.register('employees', views.EmployeeViewSet)
+router.register('training_programs', views.TrainingProgramViewSet)
+
 router.register('departments', views.DepartmentViewSet)
 
 

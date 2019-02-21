@@ -5,6 +5,7 @@ from api.models import Employee
 from api.models import Product
 from api.models import ProductType
 from api.models import PaymentType
+from api.models import Training_Program
 from api.models import Department
 
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
@@ -21,7 +22,8 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
         """like a form -- point at a model and tell it what fields you want to use"""
 
         model = Product
-        fields = ('customer','name', 'description', 'price', 'quantity', 'product_type')
+        fields = ('id','customer','name', 'description', 'price', 'quantity','product_type','url')
+        
 
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     """translates producttypes to json"""
@@ -37,6 +39,12 @@ class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
         model = PaymentType
         fields = ('payment_name', 'account_number', 'customer')
 
+class TrainingProgramSerializer(serializers.HyperlinkedModelSerializer):
+    """translates training_program to json"""
+
+    class Meta:
+        model = Training_Program
+        fields = ('id','program_name', 'program_desc', 'start_date', 'end_date', 'max_attendees','employee','url')
 class ComputerSerializer(serializers.HyperlinkedModelSerializer):
     """translates computers to json"""
 
