@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from api.models import Computer
 from api.models import Customer
 from api.models import Employee
 from api.models import Product
@@ -27,7 +28,7 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
         """like a form -- point at a model and tell it what fields you want to use"""
 
         model = Product
-        fields = ('customer','name', 'description', 'price', 'quantity','product_type')
+        fields = ('customer','name', 'description', 'price', 'quantity', 'product_type')
 
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     """translates producttypes to json"""
@@ -42,3 +43,10 @@ class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = PaymentType
         fields = ('payment_name', 'account_number', 'customer')
+
+class ComputerSerializer(serializers.HyperlinkedModelSerializer):
+    """translates computers to json"""
+
+    class Meta:
+        model = Computer
+        fields = ('purchase_date', 'decommission_date', 'manufacturer', 'model', 'is_available', 'employee', 'url')
