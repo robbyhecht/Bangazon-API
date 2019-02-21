@@ -9,12 +9,15 @@ from api.models import PaymentType
 from api.models import Employee
 from api.models import Product
 from api.models import ProductType
+from api.models import Training_Program
 
 from api.serializers import CustomerSerializer
 from api.serializers import PaymentTypeSerializer
 from api.serializers import EmployeeSerializer
 from api.serializers import ProductSerializer
 from api.serializers import ProductTypeSerializer
+from api.serializers import TrainingProgramSerializer
+
 
 @api_view(['GET'])
 def api_root(request, format=None):
@@ -23,6 +26,7 @@ def api_root(request, format=None):
         'products': reverse('products', request=request, format=format),
         'payment_types': reverse('payment_types', request=request, format=format),
         'product_types': reverse('product_types', request=request, format=format),
+        'training_programs': reverse('training_programs', request=request, format=format),
     })
 
 
@@ -69,3 +73,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 class PaymentTypeViewSet(viewsets.ModelViewSet):
     queryset = PaymentType.objects.all()
     serializer_class = PaymentTypeSerializer
+
+class TrainingProgramViewSet(viewsets.ModelViewSet):
+    queryset = Training_Program.objects.all()
+    serializer_class = TrainingProgramSerializer
