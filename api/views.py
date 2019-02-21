@@ -11,6 +11,7 @@ from api.models import Order
 from api.models import PaymentType
 from api.models import Product
 from api.models import ProductType
+from api.models import Training_Program
 from api.models import Department
 
 from api.serializers import ComputerSerializer
@@ -20,6 +21,7 @@ from api.serializers import OrderSerializer
 from api.serializers import PaymentTypeSerializer
 from api.serializers import ProductSerializer
 from api.serializers import ProductTypeSerializer
+from api.serializers import TrainingProgramSerializer
 from api.serializers import DepartmentSerializer
 
 
@@ -34,6 +36,7 @@ def api_root(request, format=None):
         'departments': reverse('departments', request=request, format=format),
         'payment_types': reverse('payment_types', request=request, format=format),
         'product_types': reverse('product_types', request=request, format=format),
+        'training_programs': reverse('training_programs', request=request, format=format),
     })
 
 
@@ -83,6 +86,11 @@ class PaymentTypeViewSet(viewsets.ModelViewSet):
 class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
+    
+class TrainingProgramViewSet(viewsets.ModelViewSet):
+    queryset = Training_Program.objects.all()
+    serializer_class = TrainingProgramSerializer
+    
 class ComputerViewSet(viewsets.ModelViewSet):
     queryset = Computer.objects.all()
     serializer_class = ComputerSerializer
