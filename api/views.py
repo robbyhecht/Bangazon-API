@@ -5,11 +5,12 @@ from rest_framework.reverse import reverse
 from rest_framework import filters
 from api.models import Customer
 from api.models import PaymentType
-from api.serializers import CustomerSerializer
 from api.models import Product
-from api.serializers import ProductSerializer
-
+from api.models import ProductType
 from api.serializers import PaymentTypeSerializer
+from api.serializers import CustomerSerializer
+from api.serializers import ProductTypeSerializer
+from api.serializers import ProductSerializer
 
 @api_view(['GET'])
 def api_root(request, format=None):
@@ -17,6 +18,7 @@ def api_root(request, format=None):
         'customers': reverse('customers', request=request, format=format),
         'products': reverse('products', request=request, format=format),
         'payment_types': reverse('payment_types', request=request, format=format),
+        'product_types': reverse('product_types', request=request, format=format),
     })
 
 
@@ -26,6 +28,16 @@ class CustomerViewSet(viewsets.ModelViewSet):
 
     filter_backends = (filters.SearchFilter, )
     search_fields = ('first_name', 'last_name')
+
+class ProductTypeViewSet(viewsets.ModelViewSet):
+    queryset = ProductType.objects.all()
+    serializer_class = ProductTypeSerializer
+
+    filter_backends = (filters.SearchFilter, )
+    search_fields = ('name')
+
+
+
 
     # use method for includes, will adjust settings/filter above for q
     # issue 1, elif
