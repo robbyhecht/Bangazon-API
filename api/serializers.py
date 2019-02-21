@@ -4,10 +4,10 @@ from api.models import Product
 from api.models import ProductType
 
 
+from api.models import PaymentType
 
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
-    '''translates customers to json
-    '''
+    """translates customers to json"""
 
     class Meta:
         model = Customer
@@ -24,3 +24,9 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
 
         model = Product
         fields = ('customer','name', 'description', 'price', 'quantity','product_type')
+class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
+    """translates payment_type to json"""
+
+    class Meta:
+        model = PaymentType
+        fields = ('payment_name', 'account_number', 'customer')
