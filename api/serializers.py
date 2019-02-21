@@ -5,6 +5,7 @@ from api.models import Order
 from api.models import Product
 from api.models import ProductType
 from api.models import PaymentType
+from api.models import Department
 
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
     """translates customers to json"""
@@ -28,7 +29,6 @@ class OrderSerializer(serializers.HyperlinkedModelSerializer):
       model = Order
       fields = ('customer', 'payment_type', 'product')
 
-
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
     """translates products to json"""
 
@@ -51,3 +51,19 @@ class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = PaymentType
         fields = ('payment_name', 'account_number', 'customer')
+
+
+class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
+    """translates departments to json"""
+
+    class Meta:
+        model = Department
+        fields = ('url', 'department_name', 'budget')
+
+
+class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
+    """translates employees to json"""
+
+    class Meta:
+        model = Employee
+        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'is_supervisor')

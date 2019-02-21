@@ -10,6 +10,7 @@ from api.models import Order
 from api.models import PaymentType
 from api.models import Product
 from api.models import ProductType
+from api.models import Department
 
 from api.serializers import CustomerSerializer
 from api.serializers import EmployeeSerializer
@@ -17,6 +18,8 @@ from api.serializers import OrderSerializer
 from api.serializers import PaymentTypeSerializer
 from api.serializers import ProductSerializer
 from api.serializers import ProductTypeSerializer
+from api.serializers import DepartmentSerializer
+
 
 @api_view(['GET'])
 def api_root(request, format=None):
@@ -24,6 +27,8 @@ def api_root(request, format=None):
         'customers': reverse('customers', request=request, format=format),
         'orders': reverse('orders', request=request, format=format),
         'products': reverse('products', request=request, format=format),
+        'departments': reverse('departments', request=request, format=format),
+        'employees': reverse('employees', request=request, format=format),
         'payment_types': reverse('payment_types', request=request, format=format),
         'product_types': reverse('product_types', request=request, format=format),
     })
@@ -42,7 +47,6 @@ class ProductTypeViewSet(viewsets.ModelViewSet):
 
     filter_backends = (filters.SearchFilter, )
     search_fields = ('name')
-
 
     # use method for includes, will adjust settings/filter above for q
     # issue 1, elif
@@ -76,3 +80,10 @@ class PaymentTypeViewSet(viewsets.ModelViewSet):
 class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
+
+class DepartmentViewSet(viewsets.ModelViewSet):
+    queryset = Department.objects.all()
+    serializer_class = DepartmentSerializer
+
+    filter_backends = (filters.SearchFilter, )
+    search_fields = ('department_name', 'budget')
