@@ -88,7 +88,7 @@ class Order(models.Model):
 class ProductOrder(models.Model):
     """A join table linking the product being sold to the order being placed"""
     product = models.ForeignKey(Product, on_delete=models.PROTECT, related_name='product_order')
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='product_rder')
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='product_order')
 
     def __str__(self):
         """string method that returns the ProductOrder id"""
