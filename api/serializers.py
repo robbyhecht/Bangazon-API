@@ -5,6 +5,7 @@ from api.models import Employee
 from api.models import Product
 from api.models import ProductType
 from api.models import PaymentType
+from api.models import Department
 
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
     """translates customers to json"""
@@ -12,14 +13,6 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Customer
         fields = ('url', 'first_name', 'last_name', 'username', 'email', 'address', 'phone_number')
-
-
-class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
-    """translates employees to json"""
-
-    class Meta:
-        model = Employee
-        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'is_supervisor')
 
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
     """translates products to json"""
@@ -50,3 +43,18 @@ class ComputerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Computer
         fields = ('purchase_date', 'decommission_date', 'manufacturer', 'model', 'is_available', 'employee', 'url')
+
+class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
+    """translates departments to json"""
+
+    class Meta:
+        model = Department
+        fields = ('url', 'department_name', 'budget')
+
+
+class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
+    """translates employees to json"""
+
+    class Meta:
+        model = Employee
+        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'is_supervisor')
