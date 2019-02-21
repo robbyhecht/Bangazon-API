@@ -14,7 +14,9 @@ from api.serializers import ProductTypeSerializer
 def api_root(request, format=None):
     return Response({
         'customers': reverse('customers', request=request, format=format),
-        'payment_types': reverse('payment_types', request=request, format=format)
+        'payment_types': reverse('payment_types', request=request, format=format),
+        'product_types': reverse('product_types', request=request, format=format)
+
     })
 
 
