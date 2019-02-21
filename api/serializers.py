@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from api.models import Computer
 from api.models import Customer
 from api.models import Employee
 from api.models import Product
@@ -22,6 +23,7 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
 
         model = Product
         fields = ('id','customer','name', 'description', 'price', 'quantity','product_type','url')
+        
 
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     """translates producttypes to json"""
@@ -43,6 +45,12 @@ class TrainingProgramSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Training_Program
         fields = ('id','program_name', 'program_desc', 'start_date', 'end_date', 'max_attendees','employee','url')
+class ComputerSerializer(serializers.HyperlinkedModelSerializer):
+    """translates computers to json"""
+
+    class Meta:
+        model = Computer
+        fields = ('purchase_date', 'decommission_date', 'manufacturer', 'model', 'is_available', 'employee', 'url')
 
 class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
     """translates departments to json"""
