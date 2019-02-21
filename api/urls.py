@@ -11,6 +11,7 @@ router.register('product_type', views.ProductTypeViewSet)
 router.register('payment_type', views.PaymentTypeViewSet)
 # router.register('directors', views.DirectorViewSet)
 # router.register('actors', views.ActorViewSet)
+router.register('employees', views.EmployeeViewSet)
 
 
 urlpatterns = [
