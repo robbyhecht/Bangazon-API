@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework import filters
 
+from api.models import Computer
 from api.models import Customer
 from api.models import PaymentType
 from api.models import Employee
@@ -11,6 +12,7 @@ from api.models import Product
 from api.models import ProductType
 from api.models import Department
 
+from api.serializers import ComputerSerializer
 from api.serializers import CustomerSerializer
 from api.serializers import PaymentTypeSerializer
 from api.serializers import EmployeeSerializer
@@ -22,7 +24,9 @@ from api.serializers import DepartmentSerializer
 @api_view(['GET'])
 def api_root(request, format=None):
     return Response({
+        'computers': reverse('computers', request=request, format=format),
         'customers': reverse('customers', request=request, format=format),
+        'employees': reverse('employees', request=request, format=format),
         'products': reverse('products', request=request, format=format),
         'departments': reverse('departments', request=request, format=format),
         'employees': reverse('employees', request=request, format=format),
@@ -74,6 +78,9 @@ class PaymentTypeViewSet(viewsets.ModelViewSet):
     queryset = PaymentType.objects.all()
     serializer_class = PaymentTypeSerializer
 
+class ComputerViewSet(viewsets.ModelViewSet):
+    queryset = Computer.objects.all()
+    serializer_class = ComputerSerializer
 
 class DepartmentViewSet(viewsets.ModelViewSet):
     queryset = Department.objects.all()

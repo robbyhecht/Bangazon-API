@@ -157,7 +157,7 @@ class Computer(SafeDeleteModel):
 class Join_Computer_Employee(models.Model):
     """a relationship between computers and employees"""
     employee = models.ForeignKey('Employee', on_delete=models.PROTECT, related_name='employee_computers')
-    computer = models.ForeignKey('Computer', on_delete=models.PROTECT, related_name='employee_computers')
+    computer = models.ForeignKey('Computer', on_delete=models.PROTECT, related_name='computer_employees')
     assign_date = models.DateField('Assign Date')
     unassign_date = models.DateField('Unassign Date', default=None, blank=True, null=True)
 
