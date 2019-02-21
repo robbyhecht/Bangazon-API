@@ -80,15 +80,12 @@ class PaymentTypeViewSet(viewsets.ModelViewSet):
     queryset = PaymentType.objects.all()
     serializer_class = PaymentTypeSerializer
 
-<<<<<<< HEAD
 class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
-=======
 class ComputerViewSet(viewsets.ModelViewSet):
     queryset = Computer.objects.all()
     serializer_class = ComputerSerializer
->>>>>>> master
 
 class DepartmentViewSet(viewsets.ModelViewSet):
     queryset = Department.objects.all()
@@ -96,8 +93,6 @@ class DepartmentViewSet(viewsets.ModelViewSet):
 
     filter_backends = (filters.SearchFilter, )
     search_fields = ('department_name', 'budget')
-<<<<<<< HEAD
-=======
 
     # use method for includes, will adjust settings/filter above for q
     # issue 1, elif
@@ -111,4 +106,3 @@ class DepartmentViewSet(viewsets.ModelViewSet):
     #         elif keyword is 'payments':
     #             query_set = query_set.filter(payments=keyword)
     #     return query_set
->>>>>>> master
