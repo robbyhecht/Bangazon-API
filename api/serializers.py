@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from api.models import Customer
 from api.models import Employee
+from api.models import Order
 from api.models import Product
 from api.models import ProductType
 from api.models import PaymentType
@@ -19,6 +20,14 @@ class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Employee
         fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'is_supervisor')
+
+class OrderSerializer(serializers.HyperlinkedModelSerializer):
+    """translates orders to json"""
+
+    class Meta:
+      model = Order
+      fields = ('customer', 'payment_type', 'product')
+
 
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
     """translates products to json"""

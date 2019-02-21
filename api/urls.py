@@ -9,9 +9,9 @@ router.register('customers', views.CustomerViewSet)
 router.register('products', views.ProductViewSet)
 router.register('product_type', views.ProductTypeViewSet)
 router.register('payment_type', views.PaymentTypeViewSet)
-# router.register('directors', views.DirectorViewSet)
-# router.register('actors', views.ActorViewSet)
 router.register('employees', views.EmployeeViewSet)
+router.register('orders', views.OrderViewSet)
+
 
 
 urlpatterns = [
