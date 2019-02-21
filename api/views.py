@@ -15,8 +15,8 @@ from api.serializers import PaymentTypeSerializer
 def api_root(request, format=None):
     return Response({
         'customers': reverse('customers', request=request, format=format),
-        'products': reverse('products', request=request, format=format)
-        'payment_types': reverse('payment_types', request=request, format=format)
+        'products': reverse('products', request=request, format=format),
+        'payment_types': reverse('payment_types', request=request, format=format),
     })
 
 
