@@ -5,18 +5,20 @@ from rest_framework.reverse import reverse
 from rest_framework import filters
 from api.models import Customer
 from api.models import PaymentType
+from api.models import Product
 from api.models import ProductType
 from api.serializers import PaymentTypeSerializer
 from api.serializers import CustomerSerializer
 from api.serializers import ProductTypeSerializer
+from api.serializers import ProductSerializer
 
 @api_view(['GET'])
 def api_root(request, format=None):
     return Response({
         'customers': reverse('customers', request=request, format=format),
+        'products': reverse('products', request=request, format=format),
         'payment_types': reverse('payment_types', request=request, format=format),
-        'product_types': reverse('product_types', request=request, format=format)
-
+        'product_types': reverse('product_types', request=request, format=format),
     })
 
 
@@ -50,6 +52,12 @@ class ProductTypeViewSet(viewsets.ModelViewSet):
     #             query_set = query_set.filter(payments=keyword)
     #     return query_set
 
+
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+    
 class PaymentTypeViewSet(viewsets.ModelViewSet):
     queryset = PaymentType.objects.all()
     serializer_class = PaymentTypeSerializer
