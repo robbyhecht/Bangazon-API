@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from api.models import Customer
+from api.models import ProductType
 from api.models import PaymentType
 
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
@@ -9,6 +10,12 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
         model = Customer
         fields = ('first_name', 'last_name', 'username', 'email', 'address', 'phone_number')
 
+class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+      model = ProductType
+      fields = ('name',)
+      
 class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
     """translates payment_type to json"""
 
