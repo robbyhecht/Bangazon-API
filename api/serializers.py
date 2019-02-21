@@ -48,7 +48,6 @@ class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
     """translates employees to json"""
 
-    department = DepartmentSerializer(read_only=True)
     class Meta:
         model = Employee
         fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'is_supervisor')
