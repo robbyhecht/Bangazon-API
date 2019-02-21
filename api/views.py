@@ -5,12 +5,15 @@ from rest_framework.reverse import reverse
 from rest_framework import filters
 from api.models import Customer
 from api.serializers import CustomerSerializer
+from api.models import Product
+from api.serializers import ProductSerializer
 
 
 @api_view(['GET'])
 def api_root(request, format=None):
     return Response({
-        'customers': reverse('customers', request=request, format=format)
+        'customers': reverse('customers', request=request, format=format),
+        'products': reverse('products', request=request, format=format)
     })
 
 
@@ -33,3 +36,10 @@ class CustomerViewSet(viewsets.ModelViewSet):
     #         elif keyword is 'payments':
     #             query_set = query_set.filter(payments=keyword)
     #     return query_set
+
+
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+    
