@@ -47,6 +47,26 @@ class CustomerViewSet(viewsets.ModelViewSet):
     filter_backends = (filters.SearchFilter, )
     search_fields = ('first_name', 'last_name')
 
+    def get_queryset(self):
+        query_set = Customer.objects.all()
+        keyword = self.request.query_params.get('_include', None)
+
+        if keyword is not None:
+          print("KEYWORD:", keyword)
+          if keyword == 'products':
+            print("KEYWORD WAS PRODUCTS")
+            query_set = query_set.filter(products__isnull = False )
+            return query_set
+
+          # if keyword is 'payments':
+
+          return query_set
+
+        else:
+          print("query params", keyword)
+
+          return query_set
+
 class ProductTypeViewSet(viewsets.ModelViewSet):
     queryset = ProductType.objects.all()
     serializer_class = ProductTypeSerializer
@@ -86,11 +106,11 @@ class PaymentTypeViewSet(viewsets.ModelViewSet):
 class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
-    
+
 class TrainingProgramViewSet(viewsets.ModelViewSet):
     queryset = Training_Program.objects.all()
     serializer_class = TrainingProgramSerializer
-    
+
 class ComputerViewSet(viewsets.ModelViewSet):
     queryset = Computer.objects.all()
     serializer_class = ComputerSerializer

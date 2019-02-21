@@ -9,12 +9,6 @@ from api.models import PaymentType
 from api.models import Training_Program
 from api.models import Department
 
-class CustomerSerializer(serializers.HyperlinkedModelSerializer):
-    """translates customers to json"""
-
-    class Meta:
-        model = Customer
-        fields = ('url', 'first_name', 'last_name', 'username', 'email', 'address', 'phone_number')
 
 
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
@@ -39,7 +33,7 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
 
         model = Product
         fields = ('id','customer','name', 'description', 'price', 'quantity','product_type','url')
-        
+
 
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     """translates producttypes to json"""
@@ -47,6 +41,14 @@ class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
       model = ProductType
       fields = ('name',)
+
+class CustomerSerializer(serializers.HyperlinkedModelSerializer):
+    """translates customers to json"""
+    products = ProductSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Customer
+        fields = ('url', 'first_name', 'last_name', 'username', 'email', 'address', 'phone_number', 'products')
 
 class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
     """translates payment_type to json"""
@@ -61,6 +63,7 @@ class TrainingProgramSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Training_Program
         fields = ('id','program_name', 'program_desc', 'start_date', 'end_date', 'max_attendees','employee','url')
+
 class ComputerSerializer(serializers.HyperlinkedModelSerializer):
     """translates computers to json"""
 
