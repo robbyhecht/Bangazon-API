@@ -6,6 +6,7 @@ from api import views
 router = DefaultRouter()
 #first movies for route, second movies for naming convention('movies, views.MovieViewSet, 'movies')
 router.register('customers', views.CustomerViewSet)
+router.register('producttype', views.ProductTypeViewSet)
 # router.register('directors', views.DirectorViewSet)
 # router.register('actors', views.ActorViewSet)
 
