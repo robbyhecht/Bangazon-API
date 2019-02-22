@@ -168,8 +168,8 @@ class Training_Program(SafeDeleteModel):
 
     program_name = models.CharField(max_length=100)
     program_desc = models.CharField(max_length=200)
-    start_date = models.DateField('Starting Date')
-    end_date = models.DateField('Ending Date')
+    start_date = models.DateTimeField('Starting Date')
+    end_date = models.DateTimeField('Ending Date')
     max_attendees =  models.IntegerField()
     employee = models.ManyToManyField(Employee, through='Join_Training_Employee', related_name='training_programs')
 
