@@ -24,13 +24,6 @@ class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
         model = Employee
         fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'is_supervisor')
 
-class OrderSerializer(serializers.HyperlinkedModelSerializer):
-    """translates orders to json"""
-
-    class Meta:
-      model = Order
-      fields = ('customer', 'payment_type', 'product')
-
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
     """translates products to json"""
 
@@ -39,7 +32,27 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
 
         model = Product
         fields = ('id','customer','name', 'description', 'price', 'quantity','product_type','url')
-        
+
+class OrderSerializer(serializers.HyperlinkedModelSerializer):
+    """translates orders to json"""
+
+    # product = ProductSerializer(read_only=True, many=True)
+
+    def __init__(self, *args, **kwargs):
+        super(OrderSerializer, self).__init__(*args, **kwargs)
+        request = kwargs['context']['request']
+        include = request.query_params.get('_include')
+
+        if include:
+            if 'product' in include:
+                self.fields['product'] = ProductSerializer(many=True, read_only=True)
+
+            if 'customer' in include:
+                self.fields['customer'] = CustomerSerializer(read_only=True)
+
+    class Meta:
+        model = Order
+        fields = ('customer', 'payment_type', 'product')
 
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     """translates producttypes to json"""

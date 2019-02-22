@@ -87,9 +87,11 @@ class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
 
+    # if order includes customers or payment types, ?_include= should be able to nest detail views of those properties within the order table
+    filter_backends = (filters.SearchFilter, )
+    search_fields = ('customer', 'payment_type', 'product') 
 
     # logic: if order has a payment type, completed then equals true
-
     def get_queryset(self):
         query_set = Order.objects.all()
         keyword = self.request.query_params.get('_completed', None)
@@ -100,7 +102,7 @@ class OrderViewSet(viewsets.ModelViewSet):
         else:
             pass
         return query_set
-    
+
 class TrainingProgramViewSet(viewsets.ModelViewSet):
     queryset = Training_Program.objects.all()
     serializer_class = TrainingProgramSerializer
