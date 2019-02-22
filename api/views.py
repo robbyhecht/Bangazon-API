@@ -99,9 +99,7 @@ class TrainingProgramViewSet(viewsets.ModelViewSet):
 
     filter_backends = (filters.SearchFilter, )
     search_fields = ('program_name', 'start_date')
-
-    filter_fields=('start_date',)
-    now = datetime.now()
+    now = timezone.now()
 
     def get_queryset(self):
         """custom queryset for grabbing the training programs with a start_date parameter
@@ -110,6 +108,7 @@ class TrainingProgramViewSet(viewsets.ModelViewSet):
         queryset = Training_Program.objects.all()
         # set the query param on the left to 'completed'
         keyword = self.request.query_params.get('completed', None)
+        
         # this is saying you can either query or not
         if keyword is not None:
             # if 'false' or 'False' is on right side of query param do the following
