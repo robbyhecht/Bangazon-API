@@ -24,7 +24,6 @@ from api.serializers import ProductTypeSerializer
 from api.serializers import TrainingProgramSerializer
 from api.serializers import DepartmentSerializer
 
-
 @api_view(['GET'])
 def api_root(request, format=None):
     return Response({
