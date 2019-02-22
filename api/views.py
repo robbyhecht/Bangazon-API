@@ -102,9 +102,6 @@ class TrainingProgramViewSet(viewsets.ModelViewSet):
     now = timezone.now()
 
     def get_queryset(self):
-        """custom queryset for grabbing the training programs with a start_date parameter
-        """
-
         queryset = Training_Program.objects.all()
         # set the query param on the left to 'completed'
         keyword = self.request.query_params.get('completed', None)
