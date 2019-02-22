@@ -24,6 +24,12 @@ from api.serializers import ProductTypeSerializer
 from api.serializers import TrainingProgramSerializer
 from api.serializers import DepartmentSerializer
 
+from django.utils import timezone
+from datetime import datetime, date
+
+
+
+
 
 @api_view(['GET'])
 def api_root(request, format=None):
@@ -90,7 +96,32 @@ class OrderViewSet(viewsets.ModelViewSet):
 class TrainingProgramViewSet(viewsets.ModelViewSet):
     queryset = Training_Program.objects.all()
     serializer_class = TrainingProgramSerializer
-    
+
+    filter_backends = (filters.SearchFilter, )
+    search_fields = ('program_name', 'start_date')
+
+    filter_fields=('start_date',)
+    now = datetime.now()
+
+    def get_queryset(self):
+        """custom queryset for grabbing the training programs with a start_date parameter
+        """
+
+        queryset = Training_Program.objects.all()
+        # set the query param on the left to 'completed'
+        keyword = self.request.query_params.get('completed', None)
+        # this is saying you can either query or not
+        if keyword is not None:
+            # if 'false' or 'False' is on right side of query param do the following
+            if keyword == "false" or keyword == "False":
+                # filter the queryset so that start_date is >= today
+                queryset = Training_Program.objects.filter(start_date__gte=self.now)
+            # now looking for true on the right side of query
+            elif keyword == "true" or keyword == "True":
+                # filter to trainings with a start date in the past
+                queryset = Training_Program.objects.filter(end_date__lte=self.now)
+        return queryset
+
 class ComputerViewSet(viewsets.ModelViewSet):
     queryset = Computer.objects.all()
     serializer_class = ComputerSerializer
