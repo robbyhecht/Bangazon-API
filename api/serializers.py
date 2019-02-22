@@ -44,10 +44,10 @@ class OrderSerializer(serializers.HyperlinkedModelSerializer):
         include = request.query_params.get('_include')
 
         if include:
-            if 'product' in include:
+            if 'products' in include:
                 self.fields['product'] = ProductSerializer(many=True, read_only=True)
 
-            if 'customer' in include:
+            if 'customers' in include:
                 self.fields['customer'] = CustomerSerializer(read_only=True)
 
     class Meta:
