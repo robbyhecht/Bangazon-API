@@ -16,14 +16,6 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
         model = Customer
         fields = ('url', 'first_name', 'last_name', 'username', 'email', 'address', 'phone_number')
 
-
-class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
-    """translates employees to json"""
-
-    class Meta:
-        model = Employee
-        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'is_supervisor')
-
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
     """translates orders to json"""
 
@@ -61,12 +53,6 @@ class TrainingProgramSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Training_Program
         fields = ('id','program_name', 'program_desc', 'start_date', 'end_date', 'max_attendees','employee','url')
-class ComputerSerializer(serializers.HyperlinkedModelSerializer):
-    """translates computers to json"""
-
-    class Meta:
-        model = Computer
-        fields = ('purchase_date', 'decommission_date', 'manufacturer', 'model', 'is_available', 'employee', 'url')
 
 class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
     """translates departments to json"""
@@ -75,10 +61,22 @@ class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
         model = Department
         fields = ('url', 'department_name', 'budget')
 
+class ComputerSerializer(serializers.HyperlinkedModelSerializer):
+    """translates computers to json"""
+
+    class Meta:
+        model = Computer
+        fields = ('purchase_date', 'decommission_date', 'manufacturer', 'model', 'employee', 'is_available', 'url')
 
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
     """translates employees to json"""
 
+    # department = DepartmentSerializer(read_only=True)
+    department = serializers.SlugRelatedField(
+        read_only=True,
+        slug_field='department_name'
+     )
+    computers = ComputerSerializer(many=True, read_only=True)
     class Meta:
         model = Employee
-        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'is_supervisor')
+        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'computers', 'is_supervisor')

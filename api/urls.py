@@ -14,7 +14,6 @@ router.register('orders', views.OrderViewSet)
 router.register('training_programs', views.TrainingProgramViewSet)
 router.register('departments', views.DepartmentViewSet)
 
-
 urlpatterns = [
     path('api/v1/', include(router.urls))
 ]
