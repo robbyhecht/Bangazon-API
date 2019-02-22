@@ -128,7 +128,7 @@ class Employee(SafeDeleteModel):
     is_supervisor = models.BooleanField(default=False)
 
     def __str__(self):
-        return_value = (f"{self.first_name} {self.last_name} works in the {self.department} department.  End date:{self.end_date}")
+        return_value = (f"{self.first_name} {self.last_name} works in the {self.department} department.")
         return return_value
     
     class Meta:
@@ -147,7 +147,7 @@ class Computer(SafeDeleteModel):
     employee = models.ManyToManyField(Employee, through='Join_Computer_Employee', related_name='computers')
 
     def __str__(self):
-        computer_name = (f"{self.manufacturer} {self.model} - ID#{self.id}: Available:{self.is_available}")
+        computer_name = (f"{self.manufacturer} {self.model} - ID#{self.id}")
         return computer_name
     
     class Meta:
