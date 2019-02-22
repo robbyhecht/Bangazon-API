@@ -45,27 +45,29 @@ class CustomerViewSet(viewsets.ModelViewSet):
     serializer_class = CustomerSerializer
 
     filter_backends = (filters.SearchFilter, )
-    search_fields = ('first_name', 'last_name')
+    search_fields = ('first_name', 'last_name', 'username', 'email', 'address', 'phone_number')
 
-    def get_queryset(self):
-        query_set = Customer.objects.all()
-        keyword = self.request.query_params.get('_include', None)
+    # def get_queryset(self):
+    #     query_set = Customer.objects.all()
+    #     keyword = self.request.query_params.get('_include', None)
 
-        if keyword is not None:
-          print("KEYWORD:", keyword)
-          if keyword == 'products':
-            print("KEYWORD WAS PRODUCTS")
-            query_set = query_set.filter(products__isnull = False )
-            return query_set
+        # if keyword is not None:
+        #   if keyword == 'products':
+        #     query_set = query_set.filter(products__isnull = False )
+        #     return query_set
 
-          # if keyword is 'payments':
+        #   if keyword == 'payments':
+        #     print("KEYWORD WAS PAYMENTS")
+        #     query_set = query_set.filter(payment_types__isnull = False )
+        #     return query_set
 
-          return query_set
 
-        else:
-          print("query params", keyword)
+        #   return query_set
 
-          return query_set
+        # else:
+        #   print("query params", keyword)
+
+    # return query_set
 
 class ProductTypeViewSet(viewsets.ModelViewSet):
     queryset = ProductType.objects.all()
