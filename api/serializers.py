@@ -71,7 +71,11 @@ class ComputerSerializer(serializers.HyperlinkedModelSerializer):
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
     """translates employees to json"""
 
-    department = DepartmentSerializer(read_only=True)
+    # department = DepartmentSerializer(read_only=True)
+    department = serializers.SlugRelatedField(
+        read_only=True,
+        slug_field='department_name'
+     )
     computers = ComputerSerializer(many=True, read_only=True)
     class Meta:
         model = Employee
