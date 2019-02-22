@@ -66,12 +66,13 @@ class ComputerSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Computer
-        fields = ('purchase_date', 'decommission_date', 'manufacturer', 'model', 'is_available', 'url')
+        fields = ('purchase_date', 'decommission_date', 'manufacturer', 'model', 'employee', 'is_available', 'url')
 
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
     """translates employees to json"""
 
     department = DepartmentSerializer(read_only=True)
+    computers = ComputerSerializer(many=True, read_only=True)
     class Meta:
         model = Employee
-        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'is_supervisor')
+        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'computers', 'is_supervisor')
