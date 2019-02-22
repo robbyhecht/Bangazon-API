@@ -9,7 +9,6 @@ from api.models import PaymentType
 from api.models import Training_Program
 from api.models import Department
 
-
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
     """translates orders to json"""
 
@@ -25,7 +24,6 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
 
         model = Product
         fields = ('id','customer','name', 'description', 'price', 'quantity','product_type','url')
-
 
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     """translates producttypes to json"""
@@ -56,7 +54,6 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
         if 'payments' in include:
             self.fields['payment_types'] = PaymentTypeSerializer(read_only=True, many=True)
 
-
     class Meta:
         model = Customer
         fields = ('url', 'first_name', 'last_name', 'username', 'email', 'address', 'phone_number')
@@ -68,13 +65,6 @@ class TrainingProgramSerializer(serializers.HyperlinkedModelSerializer):
         model = Training_Program
         fields = ('id','program_name', 'program_desc', 'start_date', 'end_date', 'max_attendees','employee','url')
 
-class ComputerSerializer(serializers.HyperlinkedModelSerializer):
-    """translates computers to json"""
-
-    class Meta:
-        model = Computer
-        fields = ('purchase_date', 'decommission_date', 'manufacturer', 'model', 'is_available', 'employee', 'url')
-
 class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
     """translates departments to json"""
 
@@ -82,11 +72,23 @@ class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
         model = Department
         fields = ('url', 'department_name', 'budget')
 
+class ComputerSerializer(serializers.HyperlinkedModelSerializer):
+    """translates computers to json"""
+
+    class Meta:
+        model = Computer
+        fields = ('purchase_date', 'decommission_date', 'manufacturer', 'model', 'employee', 'is_available', 'url')
 
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
     """translates employees to json"""
     computers = ComputerSerializer(many=True, read_only=True)
 
+    # department = DepartmentSerializer(read_only=True)
+    department = serializers.SlugRelatedField(
+        read_only=True,
+        slug_field='department_name'
+     )
+    computers = ComputerSerializer(many=True, read_only=True)
     class Meta:
         model = Employee
-        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'is_supervisor', 'computers')
+        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'computers', 'is_supervisor')
