@@ -10,14 +10,6 @@ from api.models import Training_Program
 from api.models import Department
 
 
-
-class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
-    """translates employees to json"""
-
-    class Meta:
-        model = Employee
-        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'is_supervisor')
-
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
     """translates orders to json"""
 
@@ -93,7 +85,8 @@ class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
 
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
     """translates employees to json"""
+    computers = ComputerSerializer(many=True, read_only=True)
 
     class Meta:
         model = Employee
-        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'is_supervisor')
+        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'is_supervisor', 'computers')
