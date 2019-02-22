@@ -51,23 +51,23 @@ class CustomerViewSet(viewsets.ModelViewSet):
     #     query_set = Customer.objects.all()
     #     keyword = self.request.query_params.get('_include', None)
 
-        # if keyword is not None:
-        #   if keyword == 'products':
-        #     query_set = query_set.filter(products__isnull = False )
-        #     return query_set
+    #     if keyword is not None:
+    #       if keyword == 'products':
+    #         query_set = query_set.filter(products__isnull = False )
+    #         return query_set
 
-        #   if keyword == 'payments':
-        #     print("KEYWORD WAS PAYMENTS")
-        #     query_set = query_set.filter(payment_types__isnull = False )
-        #     return query_set
+    #       if keyword == 'payments':
+    #         print("KEYWORD WAS PAYMENTS")
+    #         query_set = query_set.filter(payment_types__isnull = False )
+    #         return query_set
 
 
-        #   return query_set
+    #       return query_set
 
-        # else:
-        #   print("query params", keyword)
+    #     else:
+    #       print("query params", keyword)
 
-    # return query_set
+    #     return query_set
 
 class ProductTypeViewSet(viewsets.ModelViewSet):
     queryset = ProductType.objects.all()
