@@ -27,10 +27,6 @@ from api.serializers import DepartmentSerializer
 from django.utils import timezone
 from datetime import datetime, date
 
-
-
-
-
 @api_view(['GET'])
 def api_root(request, format=None):
     return Response({
