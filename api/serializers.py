@@ -9,13 +9,6 @@ from api.models import PaymentType
 from api.models import Training_Program
 from api.models import Department
 
-class CustomerSerializer(serializers.HyperlinkedModelSerializer):
-    """translates customers to json"""
-
-    class Meta:
-        model = Customer
-        fields = ('url', 'first_name', 'last_name', 'username', 'email', 'address', 'phone_number')
-
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
     """translates orders to json"""
 
@@ -31,7 +24,6 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
 
         model = Product
         fields = ('id','customer','name', 'description', 'price', 'quantity','product_type','url')
-        
 
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     """translates producttypes to json"""
@@ -45,7 +37,26 @@ class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = PaymentType
-        fields = ('payment_name', 'account_number', 'customer')
+        fields = ('url', 'payment_name', 'account_number', 'customer')
+
+class CustomerSerializer(serializers.HyperlinkedModelSerializer):
+    """translates customers to json"""
+
+    def __init__(self, *args, **kwargs):
+      super(CustomerSerializer, self).__init__(*args, **kwargs)
+      request = kwargs['context']['request']
+      include = request.query_params.get('_include')
+
+      if include:
+        if 'products' in include:
+            self.fields['products'] = ProductSerializer(many=True, read_only=True)
+
+        if 'payments' in include:
+            self.fields['payment_types'] = PaymentTypeSerializer(read_only=True, many=True)
+
+    class Meta:
+        model = Customer
+        fields = ('url', 'first_name', 'last_name', 'username', 'email', 'address', 'phone_number')
 
 class TrainingProgramSerializer(serializers.HyperlinkedModelSerializer):
     """translates training_program to json"""
@@ -70,6 +81,7 @@ class ComputerSerializer(serializers.HyperlinkedModelSerializer):
 
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
     """translates employees to json"""
+    computers = ComputerSerializer(many=True, read_only=True)
 
     # department = DepartmentSerializer(read_only=True)
     department = serializers.SlugRelatedField(
