@@ -49,25 +49,26 @@ class CustomerViewSet(viewsets.ModelViewSet):
     filter_backends = (filters.SearchFilter, )
     search_fields = ('first_name', 'last_name', 'username', 'email', 'address', 'phone_number')
 
-    # def get_queryset(self):
-    #     query_set = Order.objects.all()
-    #     keyword = self.request.query_params.get('active', None)
+    def get_queryset(self):
+        query_set = Customer.objects.all()
+        keyword = self.request.query_params.get('active', None)
 
-    #     if keyword is not None:
-    #       keyword = keyword.lower()
-    #       if keyword == 'false':
-    #         query_set = query_set.filter(payment_type_id__isnull = False )
-    #         return query_set
-    #       if keyword == 'true':
-    #         query_set = query_set.filter(payment_type_id__isnull = False )
-    #         return query_set
+        if keyword is not None:
+          keyword = keyword.lower()
+          if keyword == 'true':
+            query_set = query_set.filter(orders__customer_id__isnull = False)
+            return query_set
 
-    #       return query_set
+          if keyword == 'false':
+            query_set = query_set.filter(orders__customer_id__isnull = True)
+            return query_set
 
-    #     else:
-    #       print("query params", keyword)
+          return query_set
 
-    #     return query_set
+        else:
+          print("query params", keyword)
+
+        return query_set
 
 class ProductTypeViewSet(viewsets.ModelViewSet):
     queryset = ProductType.objects.all()
