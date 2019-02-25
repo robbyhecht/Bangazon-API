@@ -49,27 +49,26 @@ class CustomerViewSet(viewsets.ModelViewSet):
     filter_backends = (filters.SearchFilter, )
     search_fields = ('first_name', 'last_name', 'username', 'email', 'address', 'phone_number')
 
-    # def get_queryset(self):
-    #     query_set = Customer.objects.all()
-    #     keyword = self.request.query_params.get('_include', None)
+    def get_queryset(self):
+        query_set = Customer.objects.all()
+        keyword = self.request.query_params.get('active', None)
 
-    #     if keyword is not None:
-    #       if keyword == 'products':
-    #         query_set = query_set.filter(products__isnull = False )
-    #         return query_set
+        if keyword is not None:
+          keyword = keyword.lower()
+          if keyword == 'true':
+            query_set = query_set.filter(orders__customer_id__isnull = False)
+            return query_set
 
-    #       if keyword == 'payments':
-    #         print("KEYWORD WAS PAYMENTS")
-    #         query_set = query_set.filter(payment_types__isnull = False )
-    #         return query_set
+          if keyword == 'false':
+            query_set = query_set.filter(orders__customer_id__isnull = True)
+            return query_set
 
+          return query_set
 
-    #       return query_set
+        else:
+          print("query params", keyword)
 
-    #     else:
-    #       print("query params", keyword)
-
-    #     return query_set
+        return query_set
 
 class ProductTypeViewSet(viewsets.ModelViewSet):
     queryset = ProductType.objects.all()
@@ -113,7 +112,7 @@ class OrderViewSet(viewsets.ModelViewSet):
 
     # if order includes customers or payment types, ?_include= should be able to nest detail views of those properties within the order table
     filter_backends = (filters.SearchFilter, )
-    search_fields = ('customer', 'payment_type', 'product') 
+    search_fields = ('customer', 'payment_type', 'product')
 
     # logic: if order has a payment type, completed then equals true
     def get_queryset(self):
