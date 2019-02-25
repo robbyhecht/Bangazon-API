@@ -80,6 +80,15 @@ class TrainingProgramSerializer(serializers.HyperlinkedModelSerializer):
 class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
     """translates departments to json"""
 
+    def __init__(self, *args, **kwargs):
+        super(DepartmentSerializer, self).__init__(*args, **kwargs)
+        request = kwargs['context']['request']
+        include = request.query_params.get('_include')
+
+        if include:
+            if 'employees' in include:
+                self.fields['employees'] = EmployeeSerializer(many=True, read_only=True)
+
     class Meta:
         model = Department
         fields = ('url', 'department_name', 'budget')
