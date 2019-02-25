@@ -118,14 +118,16 @@ class OrderViewSet(viewsets.ModelViewSet):
     # logic: if order has a payment type, completed then equals true
     def get_queryset(self):
         query_set = Order.objects.all()
-        keyword = self.request.query_params.get('_completed', None)
-        if keyword == 'false':
-            query_set = query_set.filter(payment_type__isnull = True)
-        elif keyword == 'true':
-            query_set = query_set.filter(payment_type__isnull = False)
-        else:
-            pass
-        return query_set
+        keyword = self.request.query_params.get('completed', None)
+        if keyword is not None:
+          keyword = keyword.lower()
+          if keyword == 'false':
+              query_set = query_set.filter(payment_type__isnull = True)
+          elif keyword == 'true':
+              query_set = query_set.filter(payment_type__isnull = False)
+          else:
+              pass
+          return query_set
 
 class TrainingProgramViewSet(viewsets.ModelViewSet):
     queryset = Training_Program.objects.all()
