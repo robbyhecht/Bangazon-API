@@ -127,7 +127,7 @@ class OrderViewSet(viewsets.ModelViewSet):
               query_set = query_set.filter(payment_type__isnull = False)
           else:
               pass
-          return query_set
+        return query_set
 
 class TrainingProgramViewSet(viewsets.ModelViewSet):
     queryset = Training_Program.objects.all()
