@@ -171,9 +171,11 @@ class DepartmentViewSet(viewsets.ModelViewSet):
 
         keyword = self.request.query_params.get('_filter')
         if keyword == 'budget':
+            keyword = keyword.lower()
 
             keyword = self.request.query_params.get('_gt')
             if keyword is not None:
+                keyword = keyword.lower()
                 query_set = query_set.filter(budget__gte=keyword)
 
         return query_set
