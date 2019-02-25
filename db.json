@@ -1,0 +1,2724 @@
+[
+{
+  "model": "api.customer",
+  "pk": 1,
+  "fields": {
+    "deleted": null,
+    "first_name": "Sally",
+    "last_name": "Field",
+    "username": "sally",
+    "email": "sally@email.com",
+    "address": "123 Main St. Nashville, TN 37214",
+    "phone_number": 5555555555
+  }
+},
+{
+  "model": "api.customer",
+  "pk": 2,
+  "fields": {
+    "deleted": null,
+    "first_name": "Fred",
+    "last_name": "Jones",
+    "username": "fred",
+    "email": "fred@email.com",
+    "address": "454 Church St. Nashville, TN 37214",
+    "phone_number": 4546768989
+  }
+},
+{
+  "model": "api.customer",
+  "pk": 3,
+  "fields": {
+    "deleted": null,
+    "first_name": "george",
+    "last_name": "jones",
+    "username": "george",
+    "email": "george@email.com",
+    "address": "676 Broadway Nashville, TN 37214",
+    "phone_number": 8884546767
+  }
+},
+{
+  "model": "api.customer",
+  "pk": 4,
+  "fields": {
+    "deleted": null,
+    "first_name": "Gayle",
+    "last_name": "Ross",
+    "username": "gayle",
+    "email": "gayle@email.com",
+    "address": "909 Marriott Dr. Nashville, TN 37214",
+    "phone_number": 5556768181
+  }
+},
+{
+  "model": "api.customer",
+  "pk": 5,
+  "fields": {
+    "deleted": null,
+    "first_name": "John",
+    "last_name": "Rogers",
+    "username": "john",
+    "email": "john@email.com",
+    "address": "323 S. Hall St. Frankfort, KY 42301",
+    "phone_number": 5453672323
+  }
+},
+{
+  "model": "api.producttype",
+  "pk": 1,
+  "fields": {
+    "name": "Animals"
+  }
+},
+{
+  "model": "api.producttype",
+  "pk": 2,
+  "fields": {
+    "name": "Misc"
+  }
+},
+{
+  "model": "api.producttype",
+  "pk": 3,
+  "fields": {
+    "name": "Jewelry"
+  }
+},
+{
+  "model": "api.producttype",
+  "pk": 4,
+  "fields": {
+    "name": "Electronics"
+  }
+},
+{
+  "model": "api.producttype",
+  "pk": 5,
+  "fields": {
+    "name": "Furniture"
+  }
+},
+{
+  "model": "api.producttype",
+  "pk": 6,
+  "fields": {
+    "name": "Automobiles"
+  }
+},
+{
+  "model": "api.producttype",
+  "pk": 7,
+  "fields": {
+    "name": "Sports Equipment"
+  }
+},
+{
+  "model": "api.producttype",
+  "pk": 8,
+  "fields": {
+    "name": "Home Goods"
+  }
+},
+{
+  "model": "api.producttype",
+  "pk": 9,
+  "fields": {
+    "name": "Baby"
+  }
+},
+{
+  "model": "api.producttype",
+  "pk": 10,
+  "fields": {
+    "name": "Toys"
+  }
+},
+{
+  "model": "api.product",
+  "pk": 1,
+  "fields": {
+    "customer": 1,
+    "name": "Tabby Cat",
+    "description": "cute little cat",
+    "price": "500.00",
+    "quantity": 5,
+    "product_type": 1
+  }
+},
+{
+  "model": "api.product",
+  "pk": 2,
+  "fields": {
+    "customer": 2,
+    "name": "Golf Clubs",
+    "description": "gently used",
+    "price": "100.00",
+    "quantity": 1,
+    "product_type": 7
+  }
+},
+{
+  "model": "api.product",
+  "pk": 3,
+  "fields": {
+    "customer": 5,
+    "name": "Baby Crib",
+    "description": "Gently used.  Pink, Blue, and yellow.",
+    "price": "75.00",
+    "quantity": 1,
+    "product_type": 9
+  }
+},
+{
+  "model": "api.product",
+  "pk": 4,
+  "fields": {
+    "customer": 4,
+    "name": "Golden Earring",
+    "description": "For those times when you need some radar love.",
+    "price": "20.00",
+    "quantity": 25,
+    "product_type": 3
+  }
+},
+{
+  "model": "api.product",
+  "pk": 5,
+  "fields": {
+    "customer": 3,
+    "name": "Thomas the Train",
+    "description": "Choo choo.",
+    "price": "5.00",
+    "quantity": 100,
+    "product_type": 10
+  }
+},
+{
+  "model": "api.product",
+  "pk": 6,
+  "fields": {
+    "customer": 1,
+    "name": "Dodge Viper",
+    "description": "Racing red.  Not ready for the dump yet.",
+    "price": "10000.00",
+    "quantity": 2,
+    "product_type": 6
+  }
+},
+{
+  "model": "api.product",
+  "pk": 7,
+  "fields": {
+    "customer": 2,
+    "name": "Calculator Watch",
+    "description": "So retro.",
+    "price": "15.00",
+    "quantity": 60,
+    "product_type": 4
+  }
+},
+{
+  "model": "api.product",
+  "pk": 8,
+  "fields": {
+    "customer": 5,
+    "name": "Mid Century Modern Couch",
+    "description": "Purple.  Not very comfortable.",
+    "price": "100.00",
+    "quantity": 10,
+    "product_type": 5
+  }
+},
+{
+  "model": "api.product",
+  "pk": 9,
+  "fields": {
+    "customer": 4,
+    "name": "Apple Cinnamon Candle",
+    "description": "Refresh your living space.",
+    "price": "20.00",
+    "quantity": 80,
+    "product_type": 8
+  }
+},
+{
+  "model": "api.product",
+  "pk": 10,
+  "fields": {
+    "customer": 1,
+    "name": "Martini Glass Set",
+    "description": "Set of 4.",
+    "price": "35.00",
+    "quantity": 5,
+    "product_type": 8
+  }
+},
+{
+  "model": "api.paymenttype",
+  "pk": 1,
+  "fields": {
+    "payment_name": "Target Card",
+    "account_number": 4545454545454545,
+    "customer": 1
+  }
+},
+{
+  "model": "api.paymenttype",
+  "pk": 2,
+  "fields": {
+    "payment_name": "Home Depot Card",
+    "account_number": 6767676767676767,
+    "customer": 2
+  }
+},
+{
+  "model": "api.paymenttype",
+  "pk": 3,
+  "fields": {
+    "payment_name": "Lowes Visa",
+    "account_number": 6767676767676767,
+    "customer": 5
+  }
+},
+{
+  "model": "api.paymenttype",
+  "pk": 4,
+  "fields": {
+    "payment_name": "Southwest Mastercard",
+    "account_number": 8787878787878787,
+    "customer": 4
+  }
+},
+{
+  "model": "api.paymenttype",
+  "pk": 5,
+  "fields": {
+    "payment_name": "Delta Skymiles AMEX",
+    "account_number": 3232323232323232,
+    "customer": 3
+  }
+},
+{
+  "model": "api.order",
+  "pk": 1,
+  "fields": {
+    "customer": 1,
+    "payment_type": 1
+  }
+},
+{
+  "model": "api.order",
+  "pk": 2,
+  "fields": {
+    "customer": 2,
+    "payment_type": 2
+  }
+},
+{
+  "model": "api.order",
+  "pk": 3,
+  "fields": {
+    "customer": 5,
+    "payment_type": 3
+  }
+},
+{
+  "model": "api.order",
+  "pk": 4,
+  "fields": {
+    "customer": 4,
+    "payment_type": 4
+  }
+},
+{
+  "model": "api.order",
+  "pk": 5,
+  "fields": {
+    "customer": 3,
+    "payment_type": 5
+  }
+},
+{
+  "model": "api.productorder",
+  "pk": 1,
+  "fields": {
+    "product": 9,
+    "order": 1
+  }
+},
+{
+  "model": "api.productorder",
+  "pk": 2,
+  "fields": {
+    "product": 3,
+    "order": 2
+  }
+},
+{
+  "model": "api.productorder",
+  "pk": 3,
+  "fields": {
+    "product": 8,
+    "order": 4
+  }
+},
+{
+  "model": "api.productorder",
+  "pk": 4,
+  "fields": {
+    "product": 6,
+    "order": 5
+  }
+},
+{
+  "model": "api.productorder",
+  "pk": 5,
+  "fields": {
+    "product": 10,
+    "order": 5
+  }
+},
+{
+  "model": "api.department",
+  "pk": 1,
+  "fields": {
+    "deleted": null,
+    "department_name": "Sales",
+    "budget": 1000000
+  }
+},
+{
+  "model": "api.department",
+  "pk": 2,
+  "fields": {
+    "deleted": null,
+    "department_name": "Marketing",
+    "budget": 500000
+  }
+},
+{
+  "model": "api.department",
+  "pk": 3,
+  "fields": {
+    "deleted": null,
+    "department_name": "HR",
+    "budget": 100
+  }
+},
+{
+  "model": "api.department",
+  "pk": 4,
+  "fields": {
+    "deleted": null,
+    "department_name": "Finance",
+    "budget": 1000
+  }
+},
+{
+  "model": "api.department",
+  "pk": 5,
+  "fields": {
+    "deleted": null,
+    "department_name": "Logistics",
+    "budget": 80000
+  }
+},
+{
+  "model": "api.department",
+  "pk": 6,
+  "fields": {
+    "deleted": null,
+    "department_name": "Research and Development",
+    "budget": 100000
+  }
+},
+{
+  "model": "api.department",
+  "pk": 7,
+  "fields": {
+    "deleted": null,
+    "department_name": "Communications",
+    "budget": 500000
+  }
+},
+{
+  "model": "api.department",
+  "pk": 8,
+  "fields": {
+    "deleted": null,
+    "department_name": "Operations",
+    "budget": 200000
+  }
+},
+{
+  "model": "api.employee",
+  "pk": 1,
+  "fields": {
+    "deleted": null,
+    "first_name": "Max",
+    "last_name": "Smith",
+    "start_date": "2019-02-01",
+    "end_date": null,
+    "department": 2,
+    "is_supervisor": false
+  }
+},
+{
+  "model": "api.employee",
+  "pk": 2,
+  "fields": {
+    "deleted": null,
+    "first_name": "Frida",
+    "last_name": "McQuire",
+    "start_date": "2019-01-01",
+    "end_date": null,
+    "department": 3,
+    "is_supervisor": true
+  }
+},
+{
+  "model": "api.employee",
+  "pk": 3,
+  "fields": {
+    "deleted": null,
+    "first_name": "Rachel",
+    "last_name": "Wilson",
+    "start_date": "2018-12-03",
+    "end_date": null,
+    "department": 1,
+    "is_supervisor": false
+  }
+},
+{
+  "model": "api.employee",
+  "pk": 4,
+  "fields": {
+    "deleted": null,
+    "first_name": "Rick",
+    "last_name": "Sanchez",
+    "start_date": "2019-01-04",
+    "end_date": "2019-02-01",
+    "department": 7,
+    "is_supervisor": false
+  }
+},
+{
+  "model": "api.employee",
+  "pk": 5,
+  "fields": {
+    "deleted": null,
+    "first_name": "Morty",
+    "last_name": "Johnson",
+    "start_date": "2016-11-01",
+    "end_date": "2019-02-04",
+    "department": 5,
+    "is_supervisor": true
+  }
+},
+{
+  "model": "api.employee",
+  "pk": 6,
+  "fields": {
+    "deleted": null,
+    "first_name": "Reba",
+    "last_name": "Clinton",
+    "start_date": "2015-09-01",
+    "end_date": null,
+    "department": 6,
+    "is_supervisor": true
+  }
+},
+{
+  "model": "api.employee",
+  "pk": 7,
+  "fields": {
+    "deleted": null,
+    "first_name": "Molly",
+    "last_name": "Jordan",
+    "start_date": "2017-12-06",
+    "end_date": null,
+    "department": 5,
+    "is_supervisor": false
+  }
+},
+{
+  "model": "api.employee",
+  "pk": 8,
+  "fields": {
+    "deleted": null,
+    "first_name": "Dave",
+    "last_name": "Green",
+    "start_date": "2018-01-15",
+    "end_date": null,
+    "department": 8,
+    "is_supervisor": false
+  }
+},
+{
+  "model": "api.employee",
+  "pk": 9,
+  "fields": {
+    "deleted": null,
+    "first_name": "Billy",
+    "last_name": "Taylor",
+    "start_date": "2019-01-14",
+    "end_date": null,
+    "department": 4,
+    "is_supervisor": true
+  }
+},
+{
+  "model": "api.computer",
+  "pk": 1,
+  "fields": {
+    "deleted": null,
+    "purchase_date": "2019-02-01",
+    "decommission_date": null,
+    "manufacturer": "Apple",
+    "model": "Macbook Pro",
+    "is_available": true
+  }
+},
+{
+  "model": "api.computer",
+  "pk": 2,
+  "fields": {
+    "deleted": null,
+    "purchase_date": "2019-01-01",
+    "decommission_date": null,
+    "manufacturer": "Lenovo",
+    "model": "Thinkpad X1",
+    "is_available": true
+  }
+},
+{
+  "model": "api.computer",
+  "pk": 3,
+  "fields": {
+    "deleted": null,
+    "purchase_date": "2018-08-01",
+    "decommission_date": "2019-02-01",
+    "manufacturer": "HP",
+    "model": "Aspire 200",
+    "is_available": false
+  }
+},
+{
+  "model": "api.computer",
+  "pk": 4,
+  "fields": {
+    "deleted": null,
+    "purchase_date": "2018-09-06",
+    "decommission_date": null,
+    "manufacturer": "Dell",
+    "model": "Inspiron",
+    "is_available": true
+  }
+},
+{
+  "model": "api.computer",
+  "pk": 5,
+  "fields": {
+    "deleted": null,
+    "purchase_date": "2018-02-01",
+    "decommission_date": null,
+    "manufacturer": "Lenovo",
+    "model": "Yoga 710",
+    "is_available": false
+  }
+},
+{
+  "model": "api.computer",
+  "pk": 6,
+  "fields": {
+    "deleted": null,
+    "purchase_date": "2017-11-20",
+    "decommission_date": null,
+    "manufacturer": "Apple",
+    "model": "13in MacBook Air",
+    "is_available": false
+  }
+},
+{
+  "model": "api.computer",
+  "pk": 7,
+  "fields": {
+    "deleted": null,
+    "purchase_date": "2018-01-02",
+    "decommission_date": "2019-02-01",
+    "manufacturer": "Asus",
+    "model": "Pro 2000",
+    "is_available": false
+  }
+},
+{
+  "model": "api.computer",
+  "pk": 8,
+  "fields": {
+    "deleted": null,
+    "purchase_date": "2018-09-05",
+    "decommission_date": null,
+    "manufacturer": "Alienware",
+    "model": "m17",
+    "is_available": true
+  }
+},
+{
+  "model": "api.computer",
+  "pk": 9,
+  "fields": {
+    "deleted": null,
+    "purchase_date": "2016-10-07",
+    "decommission_date": "2018-02-07",
+    "manufacturer": "Alienware",
+    "model": "Area51m",
+    "is_available": false
+  }
+},
+{
+  "model": "api.computer",
+  "pk": 10,
+  "fields": {
+    "deleted": null,
+    "purchase_date": "2019-01-01",
+    "decommission_date": "2019-02-07",
+    "manufacturer": "Dell",
+    "model": "300 series",
+    "is_available": false
+  }
+},
+{
+  "model": "api.computer",
+  "pk": 11,
+  "fields": {
+    "deleted": null,
+    "purchase_date": "2018-11-01",
+    "decommission_date": null,
+    "manufacturer": "Dell",
+    "model": "XPS",
+    "is_available": false
+  }
+},
+{
+  "model": "api.join_computer_employee",
+  "pk": 1,
+  "fields": {
+    "employee": 1,
+    "computer": 9,
+    "assign_date": "2019-02-01",
+    "unassign_date": null
+  }
+},
+{
+  "model": "api.join_computer_employee",
+  "pk": 3,
+  "fields": {
+    "employee": 3,
+    "computer": 5,
+    "assign_date": "2018-12-03",
+    "unassign_date": null
+  }
+},
+{
+  "model": "api.join_computer_employee",
+  "pk": 4,
+  "fields": {
+    "employee": 8,
+    "computer": 6,
+    "assign_date": "2019-02-01",
+    "unassign_date": null
+  }
+},
+{
+  "model": "api.join_computer_employee",
+  "pk": 5,
+  "fields": {
+    "employee": 6,
+    "computer": 11,
+    "assign_date": "2019-02-01",
+    "unassign_date": null
+  }
+},
+{
+  "model": "api.training_program",
+  "pk": 1,
+  "fields": {
+    "deleted": null,
+    "program_name": "Sales Training",
+    "program_desc": "Let's sell some stuff",
+    "start_date": "2019-03-22T13:40:00Z",
+    "end_date": "2019-03-29T13:40:00Z",
+    "max_attendees": 20
+  }
+},
+{
+  "model": "api.training_program",
+  "pk": 2,
+  "fields": {
+    "deleted": null,
+    "program_name": "Marketing Training",
+    "program_desc": "Let's brand some stuff",
+    "start_date": "2019-02-01T13:10:00Z",
+    "end_date": "2019-02-08T13:10:00Z",
+    "max_attendees": 30
+  }
+},
+{
+  "model": "api.training_program",
+  "pk": 3,
+  "fields": {
+    "deleted": null,
+    "program_name": "Annual Ethics Training",
+    "program_desc": "Make sure to check the box.",
+    "start_date": "2019-04-11T14:00:00Z",
+    "end_date": "2019-04-12T12:00:00Z",
+    "max_attendees": 50
+  }
+},
+{
+  "model": "api.training_program",
+  "pk": 4,
+  "fields": {
+    "deleted": null,
+    "program_name": "OSHA Training",
+    "program_desc": "Be safe.  No lost days.",
+    "start_date": "2019-01-14T06:00:00Z",
+    "end_date": "2019-01-15T12:00:00Z",
+    "max_attendees": 10
+  }
+},
+{
+  "model": "api.training_program",
+  "pk": 5,
+  "fields": {
+    "deleted": null,
+    "program_name": "New Employee Orientation",
+    "program_desc": "Let us help you get up to speed.",
+    "start_date": "2019-02-22T17:20:42Z",
+    "end_date": "2019-03-01T18:00:00Z",
+    "max_attendees": 30
+  }
+},
+{
+  "model": "api.training_program",
+  "pk": 6,
+  "fields": {
+    "deleted": null,
+    "program_name": "Financial Systems",
+    "program_desc": "Take some time to learn our systems.",
+    "start_date": "2019-10-07T06:00:00Z",
+    "end_date": "2019-10-11T18:00:00Z",
+    "max_attendees": 15
+  }
+},
+{
+  "model": "api.training_program",
+  "pk": 7,
+  "fields": {
+    "deleted": null,
+    "program_name": "C# Refresher",
+    "program_desc": "Let's see what you forgot.",
+    "start_date": "2019-12-02T06:00:00Z",
+    "end_date": "2019-12-06T12:00:00Z",
+    "max_attendees": 5
+  }
+},
+{
+  "model": "api.training_program",
+  "pk": 8,
+  "fields": {
+    "deleted": null,
+    "program_name": "Quarterly Benefits Training",
+    "program_desc": "Are you making the most of your benefits?",
+    "start_date": "2019-09-16T12:00:00Z",
+    "end_date": "2019-09-19T12:00:00Z",
+    "max_attendees": 40
+  }
+},
+{
+  "model": "api.training_program",
+  "pk": 9,
+  "fields": {
+    "deleted": null,
+    "program_name": "Giving Feedback",
+    "program_desc": "A good skill to have.",
+    "start_date": "2019-02-27T13:01:00Z",
+    "end_date": "2019-02-28T13:01:00Z",
+    "max_attendees": 10
+  }
+},
+{
+  "model": "api.join_training_employee",
+  "pk": 1,
+  "fields": {
+    "employee": 1,
+    "training_program": 1
+  }
+},
+{
+  "model": "api.join_training_employee",
+  "pk": 2,
+  "fields": {
+    "employee": 2,
+    "training_program": 3
+  }
+},
+{
+  "model": "api.join_training_employee",
+  "pk": 3,
+  "fields": {
+    "employee": 3,
+    "training_program": 2
+  }
+},
+{
+  "model": "api.join_training_employee",
+  "pk": 4,
+  "fields": {
+    "employee": 6,
+    "training_program": 9
+  }
+},
+{
+  "model": "api.join_training_employee",
+  "pk": 5,
+  "fields": {
+    "employee": 8,
+    "training_program": 4
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$120000$hPqEGQfDjk2g$O3WHzxBeAEbmgYbC5zBTggMPyLw0lFaiaIkQQ2jD7i4=",
+    "last_login": "2019-02-22T16:16:36.145Z",
+    "is_superuser": true,
+    "username": "lesley",
+    "first_name": "",
+    "last_name": "",
+    "email": "lesley@email.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-02-22T16:16:13.725Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ej0amzvntz2tazekf6ah5zo554lhaxa8",
+  "fields": {
+    "session_data": "YjUyNWMyYTUwMWVlZTlhNjU5NzQwOTY0OWQwNWUyNDdmMGQxYWYxYzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5N2U0MGQ0ZDk2YjUwNjY3MzViMmQxNmE1NzlhYmVhYTQwNDA4NjkzIn0=",
+    "expire_date": "2019-03-08T16:16:36.200Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2019-02-22T16:18:44.067Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "3",
+    "object_repr": "george",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2019-02-22T16:19:44.179Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "3",
+    "object_repr": "george",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2019-02-22T16:20:07.916Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "1",
+    "object_repr": "sally",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2019-02-22T16:20:24.000Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "2",
+    "object_repr": "fred",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2019-02-22T16:20:31.992Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "3",
+    "object_repr": "george",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2019-02-22T16:21:48.253Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "4",
+    "object_repr": "gayle",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2019-02-22T16:26:37.663Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "5",
+    "object_repr": "john",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2019-02-22T16:27:46.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "HP Aspire 200 - ID#3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2019-02-22T16:28:13.239Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Dell Inspiron - ID#4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2019-02-22T16:32:31.237Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Lenovo Yoga 710 - ID#5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2019-02-22T16:35:43.207Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Apple 13in MacBook Air - ID#6",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2019-02-22T16:36:46.312Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Asus Pro 2000 - ID#7",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2019-02-22T16:37:10.574Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Apple Macbook Pro - ID#1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"is_available\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2019-02-22T16:38:21.641Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Alienware m17 - ID#8",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2019-02-22T16:39:15.272Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Alienware Area51m - ID#9",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2019-02-22T16:39:42.958Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "Dell 300 series - ID#10",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2019-02-22T16:40:29.380Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Finance",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2019-02-22T16:40:51.992Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Logistics",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2019-02-22T16:41:19.640Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Research and Development",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2019-02-22T16:42:28.949Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Communications",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2019-02-22T16:42:52.785Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Operations",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2019-02-22T16:45:34.234Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Rick Sanchez works in the Communications department",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2019-02-22T16:46:19.718Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Morty Johnson works in the Logistics department",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2019-02-22T16:47:02.526Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Reba Clinton works in the Research and Development department",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2019-02-22T16:48:28.876Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Molly Jordan works in the Logistics department",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2019-02-22T16:48:36.476Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Molly Jordan works in the Logistics department",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2019-02-22T16:49:17.675Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "Dave Green works in the Operations department",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2019-02-22T16:49:53.653Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Billy Taylor works in the Finance department",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2019-02-22T16:54:57.541Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "JohnLowes Visa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2019-02-22T16:55:57.731Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "Gayle Southwest Mastercard",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2019-02-22T16:56:31.726Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "george Delta Skymiles AMEX",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2019-02-22T16:56:50.767Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "5",
+    "object_repr": "Furniture",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2019-02-22T16:57:16.188Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "6",
+    "object_repr": "Automobiles",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2019-02-22T16:57:32.342Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "7",
+    "object_repr": "Sports Equipment",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2019-02-22T16:57:58.844Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "8",
+    "object_repr": "Home Goods",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2019-02-22T16:58:32.800Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "9",
+    "object_repr": "Baby",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2019-02-22T16:58:45.127Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "10",
+    "object_repr": "Toys",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2019-02-22T17:00:51.079Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "3",
+    "object_repr": "Baby Crib",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2019-02-22T17:02:05.651Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "4",
+    "object_repr": "Golden Earring",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2019-02-22T17:02:17.391Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "Golf Clubs",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2019-02-22T17:02:23.987Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "Golf Clubs",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"product_type\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2019-02-22T17:02:55.517Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "5",
+    "object_repr": "Thomas the Train",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2019-02-22T17:03:47.707Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "6",
+    "object_repr": "Dodge Viper",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2019-02-22T17:04:32.249Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "7",
+    "object_repr": "Calculator Watch",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2019-02-22T17:05:21.098Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "8",
+    "object_repr": "Mid Century Modern Couch",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2019-02-22T17:05:55.466Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "9",
+    "object_repr": "Apple Cinnamon Candle",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2019-02-22T17:06:55.588Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "10",
+    "object_repr": "Martini Glass Set",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2019-02-22T17:20:06.750Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "OSHA Training",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2019-02-22T17:21:06.882Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "New Employee Orientation",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2019-02-22T17:22:05.606Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "Financial Systems",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2019-02-22T17:22:54.622Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "C# Refresher",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2019-02-22T17:24:10.737Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "8",
+    "object_repr": "Quarterly Benefits Training",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2019-02-22T19:59:08.934Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Join_Computer_Employee object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"computer\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2019-02-22T19:59:35.075Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Join_Computer_Employee object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"assign_date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2019-02-22T20:01:50.497Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Join_Computer_Employee object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2019-02-22T20:02:54.084Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Join_Computer_Employee object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2019-02-22T20:04:21.939Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "Join_Computer_Employee object (4)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2019-02-22T20:05:23.242Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Join_Computer_Employee object (2)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2019-02-22T20:06:00.087Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "11",
+    "object_repr": "Dell XPS - ID#11: Available:False",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2019-02-22T20:06:34.212Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Join_Computer_Employee object (5)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2019-02-22T20:07:41.534Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4",
+    "object_repr": "Join_Training_Employee object (4)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2019-02-22T20:08:39.352Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "Join_Training_Employee object (5)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2019-02-22T20:13:05.742Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "3",
+    "object_repr": "3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2019-02-22T20:13:12.360Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "4",
+    "object_repr": "4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2019-02-22T20:13:20.266Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "5",
+    "object_repr": "5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2019-02-22T20:14:28.890Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2019-02-22T20:14:39.291Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2019-02-22T20:15:12.311Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "3",
+    "object_repr": "3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2019-02-22T20:15:21.302Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "4",
+    "object_repr": "4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2019-02-22T20:15:29.077Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "5",
+    "object_repr": "5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2019-02-22T20:38:36.449Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Join_Computer_Employee object (5)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2019-02-22T20:38:36.489Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "Join_Computer_Employee object (4)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2019-02-22T20:38:36.523Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Join_Computer_Employee object (3)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2019-02-22T20:38:36.558Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Join_Computer_Employee object (1)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2019-02-22T20:38:46.639Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "Join_Training_Employee object (5)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2019-02-22T20:38:46.682Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4",
+    "object_repr": "Join_Training_Employee object (4)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2019-02-22T20:38:46.723Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "Join_Training_Employee object (3)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2019-02-22T20:38:46.756Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Join_Training_Employee object (2)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2019-02-22T20:38:46.795Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Join_Training_Employee object (1)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2019-02-22T20:38:58.936Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "5",
+    "object_repr": "5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2019-02-22T20:38:58.971Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "4",
+    "object_repr": "4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2019-02-22T20:38:59.000Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "3",
+    "object_repr": "3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2019-02-22T20:38:59.034Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2019-02-22T20:38:59.069Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2019-02-22T20:39:14.232Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Alienware Area51m - ID#9: Available:False",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2019-02-22T20:39:14.273Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Alienware m17 - ID#8: Available:True",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2019-02-22T20:39:14.321Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Apple 13in MacBook Air - ID#6: Available:False",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2019-02-22T20:39:14.360Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Apple Macbook Pro - ID#1: Available:True",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2019-02-22T20:39:14.396Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Asus Pro 2000 - ID#7: Available:False",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2019-02-22T20:39:14.434Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "Dell 300 series - ID#10: Available:False",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2019-02-22T20:39:14.472Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Dell Inspiron - ID#4: Available:True",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2019-02-22T20:39:14.507Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "11",
+    "object_repr": "Dell XPS - ID#11: Available:False",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2019-02-22T20:39:14.549Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "HP Aspire 200 - ID#3: Available:False",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2019-02-22T20:39:14.590Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Lenovo Thinkpad X1 - ID#2: Available:True",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2019-02-22T20:39:14.635Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Lenovo Yoga 710 - ID#5: Available:False",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2019-02-22T20:39:34.575Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "5",
+    "object_repr": "5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2019-02-22T20:39:34.627Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "4",
+    "object_repr": "4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2019-02-22T20:39:34.670Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "3",
+    "object_repr": "3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2019-02-22T20:39:34.713Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "2",
+    "object_repr": "2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2019-02-22T20:39:34.766Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "1",
+    "object_repr": "1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2019-02-22T20:39:53.779Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "1",
+    "object_repr": "sally",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2019-02-22T20:39:53.871Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "2",
+    "object_repr": "fred",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2019-02-22T20:39:53.968Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "5",
+    "object_repr": "john",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2019-02-22T20:39:54.060Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "4",
+    "object_repr": "gayle",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2019-02-22T20:39:54.157Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "3",
+    "object_repr": "george",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2019-02-22T20:40:51.675Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Reba Clinton works in the Research and Development department.  End date:None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2019-02-22T20:40:51.752Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "Dave Green works in the Operations department.  End date:None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2019-02-22T20:40:51.828Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Morty Johnson works in the Logistics department.  End date:2019-02-04",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2019-02-22T20:40:51.900Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Molly Jordan works in the Logistics department.  End date:None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2019-02-22T20:40:51.961Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Frida McQuire works in the HR department.  End date:None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2019-02-22T20:40:52.008Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Rick Sanchez works in the Communications department.  End date:2019-02-01",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2019-02-22T20:40:52.060Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Max Smith works in the Marketing department.  End date:None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2019-02-22T20:40:52.109Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Billy Taylor works in the Finance department.  End date:None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2019-02-22T20:40:52.157Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Rachel Wilson works in the Sales department.  End date:None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2019-02-22T20:41:56.565Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "george Delta Skymiles AMEX",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2019-02-22T20:41:56.619Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "Fred Home Depot Card",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2019-02-22T20:41:56.661Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "John Lowes Visa",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2019-02-22T20:41:56.737Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "Gayle Southwest Mastercard",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2019-02-22T20:41:56.783Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "Sally Target Card",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2019-02-22T20:42:12.028Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "1",
+    "object_repr": "Animals",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2019-02-22T20:42:12.072Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "6",
+    "object_repr": "Automobiles",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2019-02-22T20:42:12.111Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "9",
+    "object_repr": "Baby",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2019-02-22T20:42:12.156Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "4",
+    "object_repr": "Electronics",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2019-02-22T20:42:12.204Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "5",
+    "object_repr": "Furniture",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2019-02-22T20:42:12.246Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "8",
+    "object_repr": "Home Goods",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2019-02-22T20:42:12.289Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "Jewelry",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2019-02-22T20:42:12.339Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "2",
+    "object_repr": "Misc",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2019-02-22T20:42:12.390Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "7",
+    "object_repr": "Sports Equipment",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2019-02-22T20:42:12.451Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "10",
+    "object_repr": "Toys",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2019-02-22T20:42:26.120Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "10",
+    "object_repr": "Today's Training",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2019-02-22T20:42:26.169Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "9",
+    "object_repr": "Giving Feedback",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2019-02-22T20:42:26.209Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "8",
+    "object_repr": "Quarterly Benefits Training",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2019-02-22T20:42:26.251Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "C# Refresher",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2019-02-22T20:42:26.289Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "Financial Systems",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2019-02-22T20:42:26.329Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "New Employee Orientation",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2019-02-22T20:42:26.361Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "OSHA Training",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2019-02-22T20:42:26.405Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "Annual Ethics Training",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2019-02-22T20:42:26.443Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Marketing Training",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2019-02-22T20:42:26.479Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Sales Training",
+    "action_flag": 3,
+    "change_message": ""
+  }
+}
+]

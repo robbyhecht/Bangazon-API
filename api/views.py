@@ -144,12 +144,13 @@ class TrainingProgramViewSet(viewsets.ModelViewSet):
 
         # this is saying you can either query or not
         if keyword is not None:
+            keyword = keyword.lower()
             # if 'false' or 'False' is on right side of query param do the following
-            if keyword == "false" or keyword == "False":
+            if keyword == "false":
                 # filter the queryset so that start_date is >= today
                 queryset = Training_Program.objects.filter(start_date__gte=self.now)
             # now looking for true on the right side of query
-            elif keyword == "true" or keyword == "True":
+            elif keyword == "true":
                 # filter to trainings with a start date in the past
                 queryset = Training_Program.objects.filter(end_date__lte=self.now)
         return queryset
