@@ -144,7 +144,7 @@ class Computer(SafeDeleteModel):
     manufacturer = models.CharField(max_length=30)
     model = models.CharField(max_length=30)
     is_available = models.BooleanField(default=True)
-    employee = models.ManyToManyField(Employee, through='Join_Computer_Employee', related_name='computers')
+    employee = models.ManyToManyField(Employee, through='Join_Computer_Employee', related_name='computer')
 
     def __str__(self):
         computer_name = (f"{self.manufacturer} {self.model} - ID#{self.id}")

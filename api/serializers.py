@@ -99,7 +99,7 @@ class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
         read_only=True,
         slug_field='department_name'
      )
-    computers = ComputerSerializer(many=True, read_only=True)
+    computer = ComputerSerializer(many=True, read_only=True)
     class Meta:
         model = Employee
-        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'computers', 'is_supervisor')
+        fields = ('url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'computer', 'is_supervisor')
