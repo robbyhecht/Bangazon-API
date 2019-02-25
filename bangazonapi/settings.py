@@ -55,6 +55,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = (
+    'bangazon.com',
     'localhost:3000',
     'localhost:8000',
     '127.0.0.1:3000',
