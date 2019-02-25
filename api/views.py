@@ -51,18 +51,16 @@ class CustomerViewSet(viewsets.ModelViewSet):
 
     # def get_queryset(self):
     #     query_set = Customer.objects.all()
-    #     keyword = self.request.query_params.get('_include', None)
+    #     keyword = self.request.query_params.get('active', None)
 
     #     if keyword is not None:
-    #       if keyword == 'products':
-    #         query_set = query_set.filter(products__isnull = False )
-    #         return query_set
-
-    #       if keyword == 'payments':
-    #         print("KEYWORD WAS PAYMENTS")
-    #         query_set = query_set.filter(payment_types__isnull = False )
-    #         return query_set
-
+    #       keyword = keyword.lower()
+      #       if keyword == 'false':
+      #         query_set = query_set.filter(orders__isnull = False )
+      #         return query_set
+      #       if keyword == 'true':
+      #         query_set = query_set.filter(orders__isnull = False )
+      #         return query_set
 
     #       return query_set
 
