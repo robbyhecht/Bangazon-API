@@ -37,13 +37,6 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
         model = Product
         fields = ('id','customer','name', 'description', 'price', 'quantity','product_type','url')
 
-
-class OrderCustomerSerializer(serializers.HyperlinkedModelSerializer):
-
-  class Meta:
-    model = Customer
-    fields = '__all__'
-
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
     """translates orders to json"""
 
@@ -57,7 +50,7 @@ class OrderSerializer(serializers.HyperlinkedModelSerializer):
                 self.fields['product'] = ProductSerializer(many=True, read_only=True)
 
             if 'customers' in include:
-                self.fields['customer'] = OrderCustomerSerializer(read_only=True)
+                self.fields['customer'] = CustomerSerializer(read_only=True, context=self.context)
 
     class Meta:
         model = Order
