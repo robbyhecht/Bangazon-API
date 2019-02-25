@@ -724,7 +724,7 @@
   "model": "api.join_computer_employee",
   "pk": 4,
   "fields": {
-    "employee": 6,
+    "employee": 8,
     "computer": 6,
     "assign_date": "2019-02-01",
     "unassign_date": null
