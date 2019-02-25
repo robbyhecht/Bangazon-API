@@ -166,6 +166,20 @@ class DepartmentViewSet(viewsets.ModelViewSet):
     filter_backends = (filters.SearchFilter, )
     search_fields = ('department_name', 'budget')
 
+    def get_queryset(self):
+        query_set = Department.objects.all()
+
+        keyword = self.request.query_params.get('_filter')
+        if keyword == 'budget':
+            keyword = keyword.lower()
+
+            keyword = self.request.query_params.get('_gt')
+            if keyword is not None:
+                keyword = keyword.lower()
+                query_set = query_set.filter(budget__gte=keyword)
+
+        return query_set
+
     # use method for includes, will adjust settings/filter above for q
     # issue 1, elif
     # def get_queryset(self):
