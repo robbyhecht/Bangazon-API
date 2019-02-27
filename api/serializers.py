@@ -26,7 +26,7 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Customer
-        fields = ('id', 'url', 'first_name', 'last_name', 'username', 'email', 'address', 'phone_number')
+        fields = ('id', 'first_name', 'last_name', 'username', 'email', 'address', 'phone_number', 'url')
 
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
     """translates products to json"""
@@ -35,7 +35,7 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
         """like a form -- point at a model and tell it what fields you want to use"""
 
         model = Product
-        fields = ('id', 'customer','name', 'description', 'price', 'quantity','product_type','url')
+        fields = ('id', 'customer','name', 'description', 'price', 'quantity','product_type', 'url')
 
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
     """translates orders to json"""
@@ -54,28 +54,28 @@ class OrderSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Order
-        fields = ('id', 'customer', 'payment_type', 'product')
+        fields = ('id', 'customer', 'payment_type', 'product', 'url')
 
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     """translates producttypes to json"""
 
     class Meta:
       model = ProductType
-      fields = ('id', 'name',)
+      fields = ('id', 'name', 'url')
 
 class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
     """translates payment_type to json"""
 
     class Meta:
         model = PaymentType
-        fields = ('id', 'payment_name', 'account_number', 'customer')
+        fields = ('id', 'payment_name', 'account_number', 'customer', 'url')
 
 class TrainingProgramSerializer(serializers.HyperlinkedModelSerializer):
     """translates training_program to json"""
 
     class Meta:
         model = Training_Program
-        fields = ('id', 'program_name', 'program_desc', 'start_date', 'end_date', 'max_attendees','employee','url')
+        fields = ('id', 'program_name', 'program_desc', 'start_date', 'end_date', 'max_attendees','employee', 'url')
 
 class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
     """translates departments to json"""
@@ -91,7 +91,7 @@ class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Department
-        fields = ('id', 'url', 'department_name', 'budget')
+        fields = ('id', 'department_name', 'budget', 'url')
 
 class ComputerSerializer(serializers.HyperlinkedModelSerializer):
     """translates computers to json"""
@@ -103,12 +103,7 @@ class ComputerSerializer(serializers.HyperlinkedModelSerializer):
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
     """translates employees to json"""
 
-    # department = DepartmentSerializer(read_only=True)
-    department = serializers.SlugRelatedField(
-        read_only=True,
-        slug_field='department_name'
-     )
     computer = ComputerSerializer(many=True, read_only=True)
     class Meta:
         model = Employee
-        fields = ('id', 'url', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'computer', 'is_supervisor')
+        fields = ('id', 'first_name', 'last_name', 'start_date', 'end_date', 'department', 'computer', 'is_supervisor', 'url')
