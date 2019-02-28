@@ -54,7 +54,7 @@ class OrderSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Order
-        fields = ('id', 'customer', 'payment_type', 'product', 'url')
+        fields = ('id', 'customer', 'customer_id', 'payment_type', 'payment_type_id', 'product', 'url')
 
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     """translates producttypes to json"""
