@@ -175,7 +175,7 @@ It should look like this:
 
 ### Each Module
 
-* GET You can access a list of all employees by running a Get call to `http://localhost:8000/api/v1/{module_name}`
+* GET You can access a list of a specific module by running a Get call to `http://localhost:8000/api/v1/{module_name}`
 * GET one You can get the information on a single instance by runnning a Get call to `http://localhost:8000/website/{module_name}/{module_id}`
 >Note you need to have a instance unique ID number to get the correct information or you can click on a URL provided in the corresponding list.
 
