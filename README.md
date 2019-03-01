@@ -214,8 +214,6 @@ It should look like this:
 * If the query string parameter of ?_include=employees is provided, then all employees in the department(s) should be included in the response.
 * If the query string parameters of ?_filter=budget&_gt=300000 is provided on a request for the list of departments, then any department whose budget is $300,000, or greater, should be in the response.
 
-This repo created by the Talkative Tangs of Cohort 28:
-
 4. Training Programs: `http://localhost:8000/api/v1/training_programs`
 
 * Should be able to view only programs starting today, or in the future, with the ?completed=false query string parameter.
