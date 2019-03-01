@@ -3,7 +3,7 @@ This is an API for Bangazon LLC. This API will allow user to GET/POST/PUT and (s
 
 ## Link to ERD
 
-![Bangazon-ERD](/images/Bangazon-ERD "Bangazon-ERD")
+![Bangazon-ERD](/images/Bangazon-ERD.png "Bangazon-ERD")
 
 # Core Technologies
 
@@ -170,7 +170,7 @@ Ctrl+C to quit
 For now, all calls to the API will be made from `http://localhost:8000/api/v1` as the domain. All calls will be made from here. 
 
 It should look like this:
-![API-Root](/images/API-Root "API-Root")
+![API-Root](/images/API-Root.png "API-Root")
 
 
 ### Each Module
@@ -179,18 +179,18 @@ It should look like this:
 * GET one You can get the information on a single instance by runnning a Get call to `http://localhost:8000/website/{module_name}/{module_id}`
 >Note you need to have a instance unique ID number to get the correct information or you can click on a URL provided in the corresponding list.
 
-![Customers-Post](/images/Customers-Post "Customers-Post")
+![Customers-Post](/images/Customers-Post.png "Customers-Post")
 
 
 * PUT You can update the info on a specific instance by running a Put call to `http://localhost:8000/api/v1/{module_name}/{module_id}`.
 
-![Customers-Post](/images/Customers-Post "Customers-Post")
+![Customers-Post](/images/Customers-Post.png "Customers-Post")
     * From here, you can edit the existing information of this specific customer then click PUT to submit the edited customer.
 
 
 * POST You can enter a new payment type by navigating to `http://localhost:8000/api/v1/{module_name}/`
 
-![Customers-Post](/images/Customers-Post "Customers-Post")
+![Customers-Post](/images/Customers-Post.png "Customers-Post")
     * Enter the relevant information then click POST to generate a new instance of this.
 
 This repo created by the Talkative Tangs of Cohort 28:
