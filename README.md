@@ -193,7 +193,32 @@ It should look like this:
 ![Customers-Post](/images/Customers-Post.png "Customers-Post")
     * Enter the relevant information then click POST to generate a new instance of this.
 
+### Specific Search Queries
+
+1. Customers: `http://localhost:8000/api/v1/customers`
+
+* If the query string parameter of `?_include=products` is provided, then any products that the customer is selling should be included in the response.
+* If the query string parameter of `?_include=payments` is provided, then any payment types that the customer has used to pay for an order should be included in the response.
+* If the query string parameter of `q` is provided when querying the list of customers, then any customer that has property value that matches the pattern should be returned.
+
+If `/customers?q=mic` is requested, then any customer whose first name is Michelle, or Michael, or Domicio should be returned. Any customer whose last name is Michaelangelo, or Omici, Dibromic should be returned.  Every property of the customer object should be checked for a match.
+
+2. Orders:  `http://localhost:8000/api/v1/orders`
+
+* Should be able to filter out completed orders with the ?completed=false query string parameter. If the parameter value is true, then only completed order should be returned.
+* If the query string parameter of ?_include=products is in the URL, then the list of products in the order should be returned.
+* If the query string parameter of ?_include=customers is in the URL, then the customer representation should be included in the response.
+
+3. Departments: `http://localhost:8000/api/v1/departments`
+
+* If the query string parameter of ?_include=employees is provided, then all employees in the department(s) should be included in the response.
+* If the query string parameters of ?_filter=budget&_gt=300000 is provided on a request for the list of departments, then any department whose budget is $300,000, or greater, should be in the response.
+
 This repo created by the Talkative Tangs of Cohort 28:
+
+4. Training Programs: `http://localhost:8000/api/v1/training_programs`
+
+* Should be able to view only programs starting today, or in the future, with the ?completed=false query string parameter.
 
 [Bryan Nilsen](https://github.com/BryanNilsen)
 
