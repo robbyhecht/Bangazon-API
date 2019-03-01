@@ -220,6 +220,8 @@ This repo created by the Talkative Tangs of Cohort 28:
 
 * Should be able to view only programs starting today, or in the future, with the ?completed=false query string parameter.
 
+This repo created by the Talkative Tangs of Cohort 28:
+
 [Bryan Nilsen](https://github.com/BryanNilsen)
 
 [Lesley Boyd](https://github.com/laboyd001)
